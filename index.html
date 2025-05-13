@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhj ne hehe</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+
+    <div>
+
+        <h1 class="text-center text-primary mt-3 fw-bold"> 
+            <i class="bi bi-calculator"></i>
+            Tính điểm trung bình</h1>
+
+        <h4 class = "text-center fs-6">
+            Nhập điểm 3 môn Toán, Lý, Hóa để tính điểm trung bình và đánh giá học lực
+        </h4>
+    </div>
+
+    <div class = "container">
+            <div class = "row">
+        <div class = " col-6">
+            <div class = "card">
+                <!-- Card header -->
+                <div class = "card-header bg-primary text-white">
+                    <h5>
+                        <i class="bi bi-pencil-square"></i>
+                        Nhập điểm 
+                    </h5>
+                </div>
+
+
+                <!-- Card body -->
+                 <div class="card-body">
+                    <form id = "scoreForm">
+                        <div class="mb-3">
+                            <label class="form-label" for="toan">Điểm Toán</label>
+                            <input step = "0.1" require min="0" max="10" class="form-control" id = "toan" type = "number">
+                            <!-- require là buộc phải nhập -->
+                        </div>
+                        <div class = "mb-3">
+                            <label class = "form-label" for="ly">Điểm Lý</label>
+                            <input step = "0.1" require min="0" max="10" class= "form-control" id = "ly" type = "number">
+                        </div>
+                        <div class = "mb-3">
+                            <label class = "form-label" for="hoa">Điểm Hóa</label>
+                            <input step = "0.1" require min="0" max="10" class="form-control" id = "hoa" type = "number">
+                        </div>
+                        <button class = "btn btn-primary w-100" type = "submit">
+                            Tính điểm
+
+                        </button>
+                    </form>
+                 </div>
+
+            </div>
+        </div>
+       <div class="col-md-6 d-flex flex-column">
+                <!-- Kết quả -->
+                <div class="card mb-3 shadow-sm border-0 flex-fill" id="resultCard">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0"><i class="bi bi-bar-chart-fill me-2"></i>Kết quả</h5>
+                    </div>
+
+                    <div class="card-body text-center" id="resultSection">
+                        <h1 class="display-4 text-success" id="resultValue">0.00</h1>
+                        <p class="fs-5" id="resultMessage">---</p>
+                        <div class="row mt-4">
+                            <div class="col">
+                                <div class="border rounded p-2">
+                                    <strong>Toán:</strong> <span id="toanDisplay">--</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="border rounded p-2">
+                                    <strong>Lý:</strong> <span id="lyDisplay">--</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="border rounded p-2">
+                                    <strong>Hóa:</strong> <span id="hoaDisplay">--</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Thông tin bổ sung -->
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-secondary text-white">
+                        <h5 class="mb-0"><i class="bi bi-lightbulb-fill me-2"></i>Thang đánh giá</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="mb-0">
+                            <li>⭐ <strong>Xuất sắc</strong>: ≥ 8.5</li>
+                            <li>👍 <strong>Giỏi</strong>: 7.0 – 8.4</li>
+                            <li>👌 <strong>Khá</strong>: 5.5 – 6.9</li>
+                            <li>🙂 <strong>Trung bình</strong>: 4.0 – 5.4</li>
+                            <li>⚠️ <strong>Yếu</strong>: &lt; 4.0</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src = "./index.js"></script>
+
+    
+</body>
+</html>
